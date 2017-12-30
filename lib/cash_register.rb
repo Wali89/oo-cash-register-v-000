@@ -11,11 +11,16 @@ class CashRegister
 
   def add_item(name, price, quantity=1)
     self.total += price * quantity
+    quantity.times do
+      items << name
+    end
+    end
   end
 
   def apply_discount
     discount_percent = ((100 - self.discount)/(100))
     self.total *= discount_percent
-    
+
   end
 end
+

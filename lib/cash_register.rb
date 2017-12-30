@@ -14,13 +14,13 @@ class CashRegister
     quantity.times do
       items << name
     end
-    end
   end
 
   def apply_discount
-    discount_percent = ((100 - self.discount)/(100))
-    self.total *= discount_percent
+    if discount != 0
+      discount_percent = ((100 - self.discount)/(100))
+      self.total *= discount_percent
+    end
 
   end
 end
-

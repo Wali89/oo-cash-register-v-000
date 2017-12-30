@@ -20,6 +20,9 @@ class CashRegister
     if discount != 0
       discount_percent = ((100 - self.discount)/(100))
       self.total *= discount_percent
+
+    else
+      "There is no discount to apply."
     end
 
   end

@@ -18,7 +18,7 @@ class CashRegister
 
   def apply_discount
     if discount != 0
-      discount_percent = ((100 - self.discount)/(100))
+      discount_percent = ((100.0 - discount.to_f)/(100))
       self.total *= discount_percent
 
     else
